@@ -1,8 +1,10 @@
+// get random number to use as an index for the quotes array
 function getRandomQuote() {
   var i = Math.floor(Math.random() * quotes.length);
   return quotes[i];
 }
 
+// generate HTML for div#quote-box on index.html
 function printQuote() {
   console.log(getRandomQuote());
 }
