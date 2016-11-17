@@ -6,7 +6,20 @@ function getRandomQuote() {
 
 // generate HTML for div#quote-box on index.html
 function printQuote() {
-  console.log(getRandomQuote());
+  var quote = getRandomQuote();
+  var html = '<p class="quote">' + quote.quote + '</p>';
+  html += '<p class="source">' + quote.source;
+
+  if (quote.citation !== undefined) {
+    html += '<span class="citation">' + quote.citation + '</span>';
+  }
+  if (quote.year !== undefined) {
+    html += '<span class="year">' + quote.year + '</span>';
+  }
+
+  html += '</p>';
+
+  document.getElementById('quote-box').innerHTML = html;
 }
 
 // event listener to respond to "Show another quote" button clicks
