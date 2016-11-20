@@ -20,5 +20,15 @@ var quotes = [
   {
     quote: 'Change your thoughts and you change your world.',
     source: 'Norman Vincent Peale'
+  },
+  {
+    quote: 'There is a crack, a crack, in everything. That\'s how the light gets in.',
+    source: 'Leonard Cohen',
+    citation: 'Anthem',
+    year: 1992
+  },
+  {
+    quote: 'You miss 100% of the shots you never take.',
+    source: 'Wayne Gretzky'
   }
 ];
