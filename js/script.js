@@ -21,6 +21,14 @@ function printQuote() {
   html += '</p>';
 
   document.getElementById('quote-box').innerHTML = html;
+  document.body.style.backgroundColor = getRandomColor();
+}
+
+function getRandomColor() {
+  var red   = Math.floor(Math.random() * 256);
+  var green = Math.floor(Math.random() * 256);
+  var blue  = Math.floor(Math.random() * 256);
+  return 'rgb(' + red + ',' + green + ',' + blue + ')';
 }
 
 // event listener to respond to "Show another quote" button clicks
