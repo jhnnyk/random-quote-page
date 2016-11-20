@@ -1,4 +1,5 @@
 // get random number to use as an index for the quotes array
+// return quote at this index
 function getRandomQuote() {
   var i = Math.floor(Math.random() * quotes.length);
   return quotes[i];
