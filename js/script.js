@@ -1,8 +1,27 @@
+var usedQuotes = [];
+
 // get random number to use as an index for the quotes array
 // return quote at this index
 function getRandomQuote() {
-  var i = Math.floor(Math.random() * quotes.length);
-  return quotes[i];
+  
+  // check to see if we've already show all the quotes
+  // if so, clear the usedQuotes array and start again
+  if (usedQuotes.length === quotes.length) {
+    usedQuotes = [];
+  }
+
+  // as long as we haven't already shown all the quotes
+  // loop through the array to find one we haven't shown yet
+  while (usedQuotes.length < quotes.length) {
+    var i = Math.floor(Math.random() * quotes.length);
+
+    if (usedQuotes.indexOf(i) === -1) {
+      usedQuotes.push(i);
+      console.log(quotes[i].quote);
+      return quotes[i];
+    }
+  }
+
 }
 
 // generate HTML for div#quote-box on index.html
