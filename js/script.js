@@ -3,7 +3,7 @@ var usedQuotes = [];
 // get random number to use as an index for the quotes array
 // return quote at this index
 function getRandomQuote() {
-  
+
   // check to see if we've already show all the quotes
   // if so, clear the usedQuotes array and start again
   if (usedQuotes.length === quotes.length) {
@@ -53,6 +53,9 @@ function getRandomColor() {
 
 // load a quote right off the bat
 window.onload = printQuote();
+
+// automatically refresh the quote every 30 seconds
+var intervalID = window.setInterval(printQuote, 30000);
 
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
